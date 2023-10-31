@@ -1,7 +1,7 @@
 import crypt
 import hashlib
 
-def saltedPassword():
+def crack_salted_passwords():
 	shadow = open(input("Enter your file: "), "r")
 	password = input("Enter your password file: ")
 	results = open("saltedPasswordResults.txt", "w")
@@ -220,7 +220,7 @@ def knowsaltedPassword():
 	
 knowSalt = input("Do we have the full shadow file? Y/N\n")
 if(knowSalt == "Y"):
-	saltedPassword()
+	crack_salted_passwords()
 else:
 	knowSalt = input("Do we know that salt and encryption? Y/N\n")
 	if(knowSalt == "Y"):
